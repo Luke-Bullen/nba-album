@@ -6,8 +6,10 @@
     <span>Teams</span>
     <div class="teams-album-dropdown-content">
       <p>Hello World!</p>
-      <% @bat.each do |x| %>
-        <p><%= x.first.team %></p>
+      <% @bat.each_with_index do |x,y| %>
+        <%= link_to album_path(@album, index: y.to_s) do %>
+          <p><%= x.first.team %></p>
+        <% end %>
       <% end %>
       <%# raise %>
     </div>
