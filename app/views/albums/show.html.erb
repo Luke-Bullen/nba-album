@@ -5,10 +5,9 @@
   <div class="teams-album-dropdown">
     <span>Teams</span>
     <div class="teams-album-dropdown-content">
-      <p>Hello World!</p>
-      <% @bat.each_with_index do |x,y| %>
-        <%= link_to album_path(@album, index: y.to_s) do %>
-          <p><%= x.first.team %></p>
+      <% @batches.each_with_index do |team_array,index| %>
+        <%= link_to album_path(@album, index: index) do %>
+          <p><%= team_array.first.team %></p>
         <% end %>
       <% end %>
       <%# raise %>
