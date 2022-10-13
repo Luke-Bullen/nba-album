@@ -14,14 +14,12 @@ class AlbumsController < ApplicationController
   def show
     @album = Album.find(params[:id])
     index = params[:index].to_i || 0
-    batches = @album.cards.each_slice(6).to_a
-    @cards = batches[index] || []
-
-    @bat = batches
+    @batches = @album.cards.each_slice(6).to_a
+    @cards = @batches[index] || []
 
     @team = @cards.first.team
 
-    batches_count = batches.count
+    batches_count = @batches.count
 
     if batches_count == index + 1
       @next_index = nil
