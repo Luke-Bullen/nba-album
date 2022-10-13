@@ -3,9 +3,13 @@
 <div id="viewing-album-background">
 
   <div class="teams-album-dropdown">
-    <span>Mouse over me</span>
+    <span>Teams</span>
     <div class="teams-album-dropdown-content">
       <p>Hello World!</p>
+      <% @bat.each do |x| %>
+        <p><%= x.first.team %></p>
+      <% end %>
+      <%# raise %>
     </div>
   </div>
 

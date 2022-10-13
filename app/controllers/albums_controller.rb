@@ -17,6 +17,7 @@ class AlbumsController < ApplicationController
     batches = @album.cards.each_slice(6).to_a
     @cards = batches[index] || []
 
+    @bat = batches
 
     @team = @cards.first.team
 
