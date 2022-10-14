@@ -2,21 +2,28 @@
 
 <div id="viewing-album-background">
 
-  <div class="teams-album-dropdown">
-    <span>Teams</span>
-    <div class="teams-album-dropdown-content">
-      <% @batches.each_with_index do |team_array,index| %>
-        <%= link_to album_path(@album, index: index) do %>
-          <p><%= team_array.first.team %></p>
+  <div class="placeholder1">
+
+
+    <div class="teams-album-dropdown">
+      <h3>Teams</h3>
+      <div class="teams-album-dropdown-content">
+        <% @batches.each_with_index do |team_array,index| %>
+          <%= link_to album_path(@album, index: index) do %>
+            <p><%= team_array.first.team %></p>
+          <% end %>
         <% end %>
-      <% end %>
-      <%# raise %>
+        <%# raise %>
+      </div>
     </div>
+
+    <div class="text-end viewing-album-season">
+      <h3><%= @prev_season %>/<%= @season_short %> Season</h3>
+    </div>
+
+
   </div>
 
-  <div class="text-end viewing-album-season">
-    <h3><%= @prev_season %>/<%= @season_short %> Season</h3>
-  </div>
 
   <div class="text-center viewing-album-team">
     <h2><%= @team %></h2>
