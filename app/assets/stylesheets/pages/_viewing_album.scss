@@ -179,6 +179,10 @@
   padding: 16px 0;
   h3{
     font-size: 22px;
+    // background-color: aqua;
+    border-radius: 5px;
+    width: fit-content;
+    padding: 3px;
   }
   // span{
   //   margin-bottom: 0.5rem;
@@ -207,7 +211,7 @@
     font-size: 20px;
   }
   a:hover{
-    color: $blue;
+    color: $gold;
   }
 }
 
