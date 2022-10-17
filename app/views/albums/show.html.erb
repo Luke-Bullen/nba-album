@@ -41,14 +41,16 @@
           <% if player.album_cards.first.counter == 0 %>
 
             <%# below is commented out for the NBA placeholder - image is in _viewing_album %>
-              <!--<div class="card-image-hidden" style="background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%), url('<%= player.image %>'); border: 2px solid <%= @color %>;">-->
+            <div class="card-image-hidden" style="background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.8) 100%), url('<%= player.image %>'); border: 2px solid <%= @color %>;">
+            </div>
 
             <!-- Below is the greyed-out NBA logo if card not owned -->
               <!-- <div class="card-image-hidden" style="background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%), url('https://cdn.nba.com/headshots/nba/latest/1040x760/logoman.png'); border: 2px solid <%= @color %>;"> -->
 
+          <!-- Below is the NBA logo full color5 if card not owned
             <div class="card-image-hidden" style="border: 2px solid <%= @color %>;">
             </div>
-
+          -->
           <% else %>
 
             <!-- There's players like Devin Cannady (and others) in 2021 who doesn't have an image - his url is invalid, how to redirect that to a placeholder of a shadow outline? -->

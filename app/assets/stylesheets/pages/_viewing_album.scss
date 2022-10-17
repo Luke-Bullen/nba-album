@@ -48,8 +48,9 @@
     height: 250px;
     background-position: center;
     background-size: cover;
-    // remove the line below if want darked player image back (and un comment line 20 in albums#show)
-    background-image: url("https://1000logos.net/wp-content/uploads/2017/04/Logo-NBA-1024x640.png");
+    // remove the line below if want darked player image back and un comment line the NBA full color div in albums#show
+    // background-image: url("https://1000logos.net/wp-content/uploads/2017/04/Logo-NBA-1024x640.png");
+
     // border: 2px solid $red;
     border-radius: 5px 5px 0 0;
 }
