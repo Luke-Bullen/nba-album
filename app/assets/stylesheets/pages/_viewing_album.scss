@@ -175,13 +175,14 @@
   position: relative;
   // display: inline-block;
   color: white;
+
   // font-size: 22px;
   // padding: -16px 0;
   padding: 16px 0;
   width: fit-content;
   svg {
     transform: rotate(0deg);
-    transition: transform 0.4s;
+    transition: transform 0.3s;
   }
 
   h3{
