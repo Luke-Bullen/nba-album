@@ -182,7 +182,7 @@
   width: fit-content;
   svg {
     transform: rotate(0deg);
-    transition: transform 0.3s;
+    transition: transform 0.4s;
   }
 
   h3{
@@ -200,14 +200,24 @@
 }
 
 .teams-album-dropdown-content {
-  display: none;
+  // display: none;
+  display: block;
+  // max-height: 320px;
+  max-height: 0px;
+  transition-delay: 0.2s;
+
+
+
 
   position: absolute;
   background-color: #f9f9f9;
   // min-width: 160px;
   width: max-content;
   // width: 100%;
-  max-height: 320px;
+
+
+
+
   overflow: scroll;
 
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -244,7 +254,8 @@
 }
 
 .teams-album-dropdown:hover .teams-album-dropdown-content {
-  display: block;
+  // display: block;
+  max-height: 320px;
 
 }
 
