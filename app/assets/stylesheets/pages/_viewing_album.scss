@@ -179,6 +179,11 @@
   // padding: -16px 0;
   padding: 16px 0;
   width: fit-content;
+  svg {
+    transform: rotate(0deg);
+    transition: transform 0.4s;
+  }
+
   h3{
     font-size: 22px;
     // background-color: aqua;
@@ -195,6 +200,7 @@
 
 .teams-album-dropdown-content {
   display: none;
+
   position: absolute;
   background-color: #f9f9f9;
   // min-width: 160px;
@@ -229,19 +235,26 @@
   }
 
 
+
   // p:hover{
-  //   color: $gold;
-  // }
+    //   color: $gold;
+    // }
 
 }
 
 .teams-album-dropdown:hover .teams-album-dropdown-content {
   display: block;
+
 }
 
-
+.teams-album-dropdown:hover{
+  svg {
+    transform: rotate(-180deg);
+  }
+}
 
 .viewing-album-top-bar {
   display: grid;
   grid-template-columns: 1fr 1fr;
+
 }
