@@ -270,3 +270,63 @@
   grid-template-columns: 1fr 1fr;
 
 }
+
+
+
+
+
+
+
+
+
+// season dropdown
+
+// .viewing-album-sea-drop {
+//   display: none;
+//   color: white;
+//   font-size: 50px;
+// }
+
+.viewing-album-sea:hover .viewing-album-sea-drop {
+  display: block;
+}
+
+
+.viewing-album-sea {
+  position: relative;
+  color: white;
+  padding: 16px 0;
+  width: fit-content;
+  transition: transform 0.4s;
+  h3{
+    font-size: 22px;
+    border-radius: 5px;
+    width: fit-content;
+    padding: 0.5rem;
+  }
+}
+
+.viewing-album-sea-drop {
+  display: block;
+  transition-delay: 0.2s;
+  position: absolute;
+  background-color: #f9f9f9;
+  width: max-content;
+  overflow: scroll;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  color: black;
+  border-radius: 5px;
+}
+
+.viewing-album-sea{
+  a:hover{
+    color: antiquewhite;
+  }
+
+}
+
+.viewing-album-sea:hover .viewing-album-sea-drop{
+  // display: none;
+  background-color: violet;
+}
