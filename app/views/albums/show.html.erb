@@ -47,9 +47,17 @@
             <p><%= abc.id %></p>
           <% end %>
         <% end %>
+
+        <%# trying to sort the seaon list %>
+        <% arr = [] %>
+        <% xyz.each_with_index do |season, ind| %>
+          <% arr << season.season  %>
+        <% end %>
+        <p><%= arr.sort %></p>
       </div>
     </div>
 
+    <%# raise %>
 
 
   </div>
