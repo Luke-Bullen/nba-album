@@ -36,38 +36,10 @@
         <h3><%= @prev_season %>/<%= @season_short %> Season</h3>
       <% end %>
       <div class="viewing-album-sea-drop">
-        <p>hello</p>
-        <% xyz = Album.all %>
-        <%= xyz.first.season %>
-        <%= xyz.last.season %>
-        <% xyz.each do |abc| %>
-          <p><%= abc.season %></p>
-          <p><%= abc.id %></p>
-          <%= link_to album_path(abc.id) do %>
-            <p><%= abc.id %></p>
-          <% end %>
-        <% end %>
 
-        <%# trying to sort the seaon list %>
-        <% arr = [] %>
-        <% xyz.each_with_index do |season, ind| %>
-          <% arr << season.season  %>
-        <% end %>
-        <p><%= arr.sort %></p>
-
-        <% ray = [] %>
-        <% xyz.each do |x| %>
-          <% ray << x %>
-        <% end %>
-        <%= ray.class %>
-        <% sorted = ray.sort_by {|hsh| hsh[:season]} %>
-        <%= sorted %>
-
-        <% sorted.each do |s| %>
-          <p><%= s.season %></p>
-          <p><%= s.id %></p>
-          <%= link_to album_path(s.id) do %>
-            <p><%= s.id %></p>
+        <% @sorted_by_season.each do |album| %>
+          <%= link_to album_path(album.id) do %>
+            <p><%= album.season %></p>
           <% end %>
         <% end %>
 

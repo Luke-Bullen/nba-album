@@ -43,5 +43,13 @@ class AlbumsController < ApplicationController
     @season_short = @season.chars.last(2).join
     @prev_season = @season_short.to_i - 1
 
+    # sorting the albums by season - 2019, 2020, 2021
+    all_album = Album.all
+    all_album_array = []
+    all_album.each do |album|
+      all_album_array << album
+    end
+    @sorted_by_season = all_album_array.sort_by {|hash| hash[:season]}
+
   end
 end
