@@ -14,13 +14,13 @@
     position: relative;
 }
 
-.viewing-album-season {
-    color: white;
-    padding: 16px 0;
-    h3 {
-        font-size: 22px;
-    }
-}
+// .viewing-album-season {
+//     color: white;
+//     padding: 16px 0;
+//     h3 {
+//         font-size: 22px;
+//     }
+// }
 
 .viewing-album-team {
     color: white;
@@ -169,70 +169,51 @@
 }
 
 
-// Dropdown
 
-.teams-album-dropdown {
+// Dropdowns
+
+.viewing-album-top-bar {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.teams-album-dropdown, .viewing-album-season {
   position: relative;
-  // display: inline-block;
   color: white;
-
-  // font-size: 22px;
-  // padding: -16px 0;
   padding: 16px 0;
   width: fit-content;
   svg {
     transform: rotate(0deg);
     transition: transform 0.4s;
   }
-
-  h3{
+  h3 {
     font-size: 22px;
-    // background-color: aqua;
     border-radius: 5px;
     width: fit-content;
     padding: 0.5rem;
   }
-  // span{
-  //   margin-bottom: 0.5rem;
-
-  // }
-
 }
 
-.teams-album-dropdown-content {
-  // display: none;
+.viewing-album-season {
+    justify-self: end;
+}
+
+.teams-album-dropdown-content, .viewing-album-season-dropdown {
   display: block;
-  // max-height: 320px;
   max-height: 0px;
   transition-delay: 0.2s;
-
-
-
-
   position: absolute;
   background-color: #f9f9f9;
-  // min-width: 160px;
   width: max-content;
-  // width: 100%;
-
-
-
-
   overflow: scroll;
-
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  // padding: 12px 16px;
   z-index: 1;
   color: black;
-
   border-radius: 5px;
-
   p{
-    // padding: 12px 16px;
     padding: 0.5rem;
     margin: 0;
   }
-
   a{
     text-decoration: none;
     color: black;
@@ -244,91 +225,18 @@
       background-color: black;
     }
   }
-
-
-
-  // p:hover{
-    //   color: $gold;
-    // }
-
 }
 
-.teams-album-dropdown:hover .teams-album-dropdown-content {
-  // display: block;
-  max-height: 320px;
+.viewing-album-season-dropdown {
+  right: 0;
+}
 
+.teams-album-dropdown:hover .teams-album-dropdown-content, .viewing-album-season:hover .viewing-album-season-dropdown {
+  max-height: 320px;
 }
 
 .teams-album-dropdown:hover{
   svg {
     transform: rotate(-180deg);
   }
-}
-
-.viewing-album-top-bar {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-
-}
-
-
-
-
-
-
-
-
-
-// season dropdown
-
-// .viewing-album-sea-drop {
-//   display: none;
-//   color: white;
-//   font-size: 50px;
-// }
-
-.viewing-album-sea:hover .viewing-album-sea-drop {
-  display: block;
-}
-
-
-.viewing-album-sea {
-  position: relative;
-  color: white;
-  padding: 16px 0;
-  width: fit-content;
-  justify-self: end;
-  transition: transform 0.4s;
-  h3{
-    font-size: 22px;
-    border-radius: 5px;
-    width: fit-content;
-    padding: 0.5rem;
-  }
-}
-
-.viewing-album-sea-drop {
-  display: block;
-  transition-delay: 0.2s;
-  position: absolute;
-  background-color: #f9f9f9;
-  width: max-content;
-  overflow: scroll;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-  color: black;
-  border-radius: 5px;
-  right: 0;
-}
-
-.viewing-album-sea{
-  a:hover{
-    color: antiquewhite;
-  }
-
-}
-
-.viewing-album-sea:hover .viewing-album-sea-drop{
-  // display: none;
-  background-color: violet;
 }
