@@ -54,6 +54,23 @@
           <% arr << season.season  %>
         <% end %>
         <p><%= arr.sort %></p>
+
+        <% ray = [] %>
+        <% xyz.each do |x| %>
+          <% ray << x %>
+        <% end %>
+        <%= ray.class %>
+        <% sorted = ray.sort_by {|hsh| hsh[:season]} %>
+        <%= sorted %>
+
+        <% sorted.each do |s| %>
+          <p><%= s.season %></p>
+          <p><%= s.id %></p>
+          <%= link_to album_path(s.id) do %>
+            <p><%= s.id %></p>
+          <% end %>
+        <% end %>
+
       </div>
     </div>
 
