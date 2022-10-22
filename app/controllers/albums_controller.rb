@@ -49,7 +49,7 @@ class AlbumsController < ApplicationController
     all_album.each do |album|
       all_album_array << album
     end
-    @sorted_by_season = all_album_array.sort_by {|hash| hash[:season]}
+    @sorted_by_season = all_album_array.sort_by { |hash| hash[:season] }
 
   end
 end

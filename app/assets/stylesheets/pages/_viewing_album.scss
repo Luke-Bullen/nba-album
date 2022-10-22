@@ -297,6 +297,7 @@
   color: white;
   padding: 16px 0;
   width: fit-content;
+  justify-self: end;
   transition: transform 0.4s;
   h3{
     font-size: 22px;
@@ -317,6 +318,7 @@
   z-index: 1;
   color: black;
   border-radius: 5px;
+  right: 0;
 }
 
 .viewing-album-sea{
