@@ -31,15 +31,13 @@
 
 
 
-    <div class="text-end viewing-album-sea">
-      <%= link_to root_path do %>
-        <h3><%= @prev_season %>/<%= @season_short %> Season</h3>
-      <% end %>
-      <div class="viewing-album-sea-drop">
+    <div class="viewing-album-season">
+      <h3><%= @prev_season %>/<%= @season_short %> Season</h3>
+      <div class="viewing-album-season-dropdown">
 
         <% @sorted_by_season.each do |album| %>
           <%= link_to album_path(album.id) do %>
-            <p><%= album.season %></p>
+            <p><%= album.season.to_i - 1 %>/<%= album.season.to_i %></p>
           <% end %>
         <% end %>
 
