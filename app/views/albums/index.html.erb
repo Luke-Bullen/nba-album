@@ -6,6 +6,20 @@
     <h2>My Albums</h2>
   </div>
 
+  <div>
+    <% @sorted_by_season.each do |album| %>
+      <%= link_to album_path(album.id) do %>
+        <p><%= album.season.to_i - 1 %>/<%= album.season.to_i %></p>
+      <% end %>
+    <% end %>
+  </div>
+
+
+
+<%# Florians coded version of the albums %>
+
+  <!--
+
   <% covers = ['panini_1718.png', 'panini_1819.png', 'panini_1920.png', 'panini_2021.png', 'panini_2122.png'] %>
   <%# <% number_of_albums = Album.count.where(user_id: current_user.id) %>
   <% number_of_albums = current_user.albums.count %>
@@ -81,5 +95,7 @@
 
     </div>
   <% end %>
+
+  -->
 
 </div>
