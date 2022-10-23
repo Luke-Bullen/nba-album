@@ -9,6 +9,16 @@ class AlbumsController < ApplicationController
     @albums = Album.where(user_id: current_user.id)
     # @album = Album.where(user_id: current_user.id)
     # @album = Album.find(params[:id])
+
+
+  # My added code from below - fix DRY later
+  # sorting the albums by season - 2019, 2020, 2021
+    all_album = Album.all
+    all_album_array = []
+    all_album.each do |album|
+      all_album_array << album
+    end
+    @sorted_by_season = all_album_array.sort_by { |hash| hash[:season] }
   end
 
   def show
