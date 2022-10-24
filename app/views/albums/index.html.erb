@@ -11,8 +11,10 @@
       <%= link_to album_path(album.id) do %>
         <p><%= album.season.to_i - 1 %>/<%= album.season.to_i %></p>
       <% end %>
+      <h2><%= @total_album_card_count.call(album.season) %></h2>
     <% end %>
   </div>
+
 
 
 

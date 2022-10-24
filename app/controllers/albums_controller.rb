@@ -1,4 +1,6 @@
 class AlbumsController < ApplicationController
+  attr_accessor :card_count
+
   def cards
   end
 
@@ -19,6 +21,12 @@ class AlbumsController < ApplicationController
       all_album_array << album
     end
     @sorted_by_season = all_album_array.sort_by { |hash| hash[:season] }
+
+    # @total_album_card_count = Card.where(season: x).count
+    #  -> means lambda
+    @total_album_card_count = ->(x) { Card.where(season: x).count }
+
+
   end
 
   def show
@@ -62,4 +70,5 @@ class AlbumsController < ApplicationController
     @sorted_by_season = all_album_array.sort_by { |hash| hash[:season] }
 
   end
+
 end
