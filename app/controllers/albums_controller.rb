@@ -28,8 +28,6 @@ class AlbumsController < ApplicationController
 
     @number_of_owned_cards_in_album_count = ->(x) { AlbumCard.where(counter: 1.., album_id: x).count }
 
-
-    # AlbumCard.where(counter: 1..).count
   end
 
   def show
