@@ -6,13 +6,25 @@
     <h2>My Albums</h2>
   </div>
 
-  <div>
-    <% @sorted_by_season.each do |album| %>
-      <%= link_to album_path(album.id) do %>
-        <p><%= album.season.to_i - 1 %>/<%= album.season.to_i %></p>
-      <% end %>
-      <h2><%= @number_of_owned_cards_in_album_count.call(album.id) %> / <%= @total_card_count_of_album.call(album.season) %> </h2>
-    <% end %>
+
+  <div class="album-cards-container">
+      <div class="album-cards">
+
+        <% @sorted_by_season.each do |album| %>
+
+          <%= link_to album_path(album.id) do %>
+            <div class="card">
+              <div class="card-image-shown" style="background: rgb(55,55,55)">
+              </div>
+              <div class="card-basic-info">
+                <p><%= album.season.to_i - 1 %>/<%= album.season.to_i %></p>
+                <h2><%= @number_of_owned_cards_in_album_count.call(album.id) %> / <%= @total_card_count_of_album.call(album.season) %> </h2>
+              </div>
+            </div>
+          <% end %>
+
+        <% end %>
+    </div>
   </div>
 
 
