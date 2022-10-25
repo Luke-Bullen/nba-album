@@ -26,9 +26,9 @@ class AlbumsController < ApplicationController
     #  -> means lambda
     @total_card_count_of_album = ->(x) { Card.where(season: x).count }
 
-    @number_of_owned_cards_in_album_count = -> { @total_card_count_of_album.where }
+    @number_of_owned_cards_in_album_count = ->(x) { AlbumCard.where(counter: 1.., album_id: x).count }
 
-    
+
     # AlbumCard.where(counter: 1..).count
   end
 
