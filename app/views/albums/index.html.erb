@@ -12,7 +12,8 @@
         <p><%= album.season.to_i - 1 %>/<%= album.season.to_i %></p>
       <% end %>
       <h2><%= @total_card_count_of_album.call(album.season) %></h2>
-      <h2><%= AlbumCard.where(counter: 1.., album_id: album.id).count %></h2>
+      <h2><%= @number_of_owned_cards_in_album_count.call(album.id) %></h2>
+
     <% end %>
   </div>
 
