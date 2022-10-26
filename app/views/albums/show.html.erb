@@ -116,7 +116,7 @@
   </div>
 
   <div class="text-center viewing-album-to-quiz-button">
-    <%= link_to "Add Stickers", "/albums/#{@album.id}/quizzes/#{rand(@quiz_first..@quiz_last)}", style: "background-color: #{@color} " %>
+    <%= link_to "Add Stickers", "/albums/#{@album.id}/quizzes/#{rand(@quiz_first..@quiz_last)}", style: "background-color: #{@color} ", target: "_top" %>
   </div>
 
   <div>
@@ -131,7 +131,7 @@
 
     <% if @next_index.present? %>
 
-      <%= link_to album_path(@album, index: @next_index.to_s) do %>
+      <%= link_to album_path(@album, index: @next_index.to_s), target: "_top" do %>
         <div class= "arrow-right", style="border-left: 32px solid <%= @color %>;">
         </div>
       <% end %>
