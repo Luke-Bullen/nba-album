@@ -37,16 +37,13 @@
 
         <% @sorted_by_season.each do |album| %>
           <%# link_to album_path(album.id) do %>
-          <%= link_to album_path(album.id, index: @ind) do %>
+          <%= link_to album_path(album.id, index: @team_index) do %>
             <p><%= album.season.to_i - 1 %>/<%= album.season.to_i %></p>
           <% end %>
         <% end %>
 
       </div>
     </div>
-
-    <%# raise %>
-
 
   </div>
 
