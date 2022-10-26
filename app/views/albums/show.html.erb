@@ -13,7 +13,7 @@
       </h3>
 
       <div class="teams-album-dropdown-content">
-        <% @batches.each_with_index do |team_array,index| %>
+        <% @batches.each_with_index do |team_array, index| %>
           <%= link_to album_path(@album, index: index) do %>
             <p><%= team_array.first.team %></p>
           <% end %>
@@ -36,7 +36,8 @@
       <div class="viewing-album-season-dropdown">
 
         <% @sorted_by_season.each do |album| %>
-          <%= link_to album_path(album.id) do %>
+          <%# link_to album_path(album.id) do %>
+          <%= link_to album_path(album.id, index: @ind) do %>
             <p><%= album.season.to_i - 1 %>/<%= album.season.to_i %></p>
           <% end %>
         <% end %>
@@ -140,5 +141,4 @@
 
     <% end %>
   </div>
-
 </div>

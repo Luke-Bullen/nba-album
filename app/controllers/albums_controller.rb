@@ -70,6 +70,7 @@ class AlbumsController < ApplicationController
     end
     @sorted_by_season = all_album_array.sort_by { |hash| hash[:season] }
 
+    @ind = params[:index] || 0
   end
 
 end
