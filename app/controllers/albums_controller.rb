@@ -32,7 +32,9 @@ class AlbumsController < ApplicationController
 
   def show
     @album = Album.find(params[:id])
-    index = params[:index].to_i || 0
+    @team_index = params[:index] || 0.to_s
+    # index = params[:index].to_i || 0
+    index = @team_index.to_i
     @batches = @album.cards.each_slice(6).to_a
     @cards = @batches[index] || []
 
@@ -70,7 +72,7 @@ class AlbumsController < ApplicationController
     end
     @sorted_by_season = all_album_array.sort_by { |hash| hash[:season] }
 
-    @ind = params[:index] || 0
+    # @ind = params[:index] || 0.to_s
   end
 
 end
