@@ -85,3 +85,6 @@ window.onhashchange = x();
 
 
 console.log("hihiiiii")
+
+
+// by using taget = "_top" on link_to ---- not sur which window. / .eventListner is triggering it tho
