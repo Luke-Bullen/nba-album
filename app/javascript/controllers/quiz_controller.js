@@ -61,20 +61,30 @@ export default class extends Controller {
 
 // Unhide the content and jump to the right place on the page at the same time
 // function restoreAndSkipContent() {
-//   var hidden = document.querySelector('.skip-me');
-
-//   hidden.classList.remove('skip-me');
+//   var hidden = document.getElementsByClassName('skip-me')[0];
 //   hidden.classList.add('unhide');
-//   // window.scroll(0, hidden.offsetHeight);
+//   window.scroll(0, hidden.offsetHeight);
 // };
-// // window.onopen = restoreAndSkipContent();
-// window.onload = restoreAndSkipContent();
-function show() {
-  let hidden = document.querySelector('.skip-me');
-  hidden.classList.remove('skip-me');
-}
-function print() {
-  console.log("scrolling");
-}
-window.onscroll = show();
-window.onscroll = print();
+// restoreAndSkipContent();
+
+
+
+window.onscroll = function(){
+  var hidden = document.getElementsByClassName('skip-me')[0];
+  hidden.classList.add('unhide');
+  // hidden.classList.remove('skip-me');
+  // window.scroll(0, hidden.offsetHeight);
+};
+
+
+// window.onload = function(){
+//   var hidden = document.getElementsByClassName('skip-me')[0];
+//   hidden.classList.add('unhide');
+//   window.scroll(0, hidden.offsetHeight);
+// };
+
+// window.onmousemove = function(){
+//   var hidden = document.getElementsByClassName('skip-me')[0];
+//   hidden.classList.add('unhide');
+//   window.scroll(0, hidden.offsetHeight);
+// };
