@@ -41,50 +41,40 @@ export default class extends Controller {
   };
 };
 
-function x() {
-  console.log("maybe")
-}
 
-let element = document.getElementById("bodyy");
-// true makes sure it scrolls so top of element is at top of view - false would put the buttom on the buttom
-// element.scrollIntoView(true);
-function scroller() {
-  element.scrollIntoView(true);
-}
+// let element = document.getElementById("bodyy");
 
-window.onload = scroller();
-window.onload = x()
+// // true makes sure it scrolls so top of element is at top of view - false would put the buttom on the buttom
+// // element.scrollIntoView(true);
 
-// window.onload = console.log("done");
-window.onpageshow = scroller();
-window.onpageshow = x();
-
-window.open = scroller();
-window.open = x();
-
-window.onopen = scroller();
-window.onopen = x();
-
-console.log("hihi")
-
-function pop() {
-	console.log("popstate");
-}
-function localcha() {
-  console.log('location changed!');
-}
-
-window.addEventListener('popstate', pop());
-window.addEventListener('popstate', scroller());
-
-window.addEventListener('locationchange', localcha());
-window.addEventListener('locationchange', scroller());
-
-window.onhashchange = scroller();
-window.onhashchange = x();
-
-
-console.log("hihiiiii")
-
+// function scroller() {
+//   element.scrollIntoView(true);
+// }
+// window.onopen = scroller();
+// console.log("hihiiiii")
 
 // by using taget = "_top" on link_to ---- not sur which window. / .eventListner is triggering it tho
+
+
+
+
+
+// Unhide the content and jump to the right place on the page at the same time
+// function restoreAndSkipContent() {
+//   var hidden = document.querySelector('.skip-me');
+
+//   hidden.classList.remove('skip-me');
+//   hidden.classList.add('unhide');
+//   // window.scroll(0, hidden.offsetHeight);
+// };
+// // window.onopen = restoreAndSkipContent();
+// window.onload = restoreAndSkipContent();
+function show() {
+  let hidden = document.querySelector('.skip-me');
+  hidden.classList.remove('skip-me');
+}
+function print() {
+  console.log("scrolling");
+}
+window.onscroll = show();
+window.onscroll = print();
