@@ -42,49 +42,10 @@ export default class extends Controller {
 };
 
 
-// let element = document.getElementById("bodyy");
-
-// // true makes sure it scrolls so top of element is at top of view - false would put the buttom on the buttom
-// // element.scrollIntoView(true);
-
-// function scroller() {
-//   element.scrollIntoView(true);
-// }
-// window.onopen = scroller();
-// console.log("hihiiiii")
-
-// by using taget = "_top" on link_to ---- not sur which window. / .eventListner is triggering it tho
-
-
-
-
-
-// Unhide the content and jump to the right place on the page at the same time
-// function restoreAndSkipContent() {
-//   var hidden = document.getElementsByClassName('skip-me')[0];
-//   hidden.classList.add('unhide');
-//   window.scroll(0, hidden.offsetHeight);
-// };
-// restoreAndSkipContent();
-
-
-
-window.onscroll = function(){
+window.onscroll = function navbarReveal() {
   var hidden = document.getElementsByClassName('skip-me')[0];
   hidden.classList.add('unhide');
-  // hidden.classList.remove('skip-me');
-  // window.scroll(0, hidden.offsetHeight);
 };
 
-
-// window.onload = function(){
-//   var hidden = document.getElementsByClassName('skip-me')[0];
-//   hidden.classList.add('unhide');
-//   window.scroll(0, hidden.offsetHeight);
-// };
-
-// window.onmousemove = function(){
-//   var hidden = document.getElementsByClassName('skip-me')[0];
-//   hidden.classList.add('unhide');
-//   window.scroll(0, hidden.offsetHeight);
-// };
+// try to see if instead of display none - use -height to put it above screen
+// or timed event, ie, being on page for 1s ect.
