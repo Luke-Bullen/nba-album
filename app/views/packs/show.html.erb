@@ -28,11 +28,11 @@
   </div>
 
   <div class="pack-more-button">
-    <%= link_to "Open Another Pack", "/albums/#{@album.id}/quizzes/#{rand(@quiz_first..@quiz_last)}" %>
+    <%= link_to "Open Another Pack", "/albums/#{@album.id}/quizzes/#{rand(@quiz_first..@quiz_last)}", target: "_top" %>
   </div>
 
   <div class="pack-to-viewing-album-button">
-    <%= link_to "See Album", album_path(@album), class: "pack-more" %>
+    <%= link_to "See Album", album_path(@album), class: "pack-more", target: "_top" %>
   </div>
 
 </div>
