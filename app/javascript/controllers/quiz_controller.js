@@ -42,10 +42,10 @@ export default class extends Controller {
 };
 
 
-window.onscroll = function navbarReveal() {
-  var hidden = document.getElementsByClassName('skip-me')[0];
-  hidden.classList.add('unhide');
-};
+// window.onscroll = function navbarReveal() {
+//   var hidden = document.getElementsByClassName('skip-me')[0];
+//   hidden.classList.add('unhide');
+// };
 
-// try to see if instead of display none - use -height to put it above screen
-// or timed event, ie, being on page for 1s ect.
+// // try to see if instead of display none - use -height to put it above screen
+// // or timed event, ie, being on page for 1s ect.
