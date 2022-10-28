@@ -9,3 +9,14 @@ application.register("hello", HelloController)
 
 import QuizController from "./quiz_controller"
 application.register("quiz", QuizController)
+
+
+
+
+// Navbar reveal - placed here currently as want to apply to every page (not a specific controller) but will move later
+window.onscroll = function navbarReveal() {
+  var hidden = document.getElementsByClassName('skip-me')[0];
+  hidden.classList.add('unhide');
+};
+// try to see if instead of display none - use -height to put it above screen
+// or timed event, ie, being on page for 1s ect. --- Timed event with display none pushes page down
