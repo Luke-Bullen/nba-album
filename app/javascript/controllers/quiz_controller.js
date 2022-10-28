@@ -43,8 +43,8 @@ export default class extends Controller {
 
 
 // window.onscroll = function navbarReveal() {
-//   var hidden = document.getElementsByClassName('skip-me')[0];
-//   hidden.classList.add('unhide');
+//   var hidden = document.getElementsByClassName('hide-navbar')[0];
+//   hidden.classList.add('unhide-navbar');
 // };
 
 // // try to see if instead of display none - use -height to put it above screen
