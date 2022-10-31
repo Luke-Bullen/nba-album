@@ -30,6 +30,10 @@ export default class extends Controller {
 
 
 
+
+
+
+
           // let quizButtonz = document.getElementsByClassName("quiz-button-lg");
           // quizButtonz.disabled = true;
 
@@ -52,6 +56,12 @@ export default class extends Controller {
 
 
 
+
+
+
+
+          
+
           // let quizButtonz = document.getElementsByClassName("quiz-button-lg");
           // quizButtonz.disabled = true;
 
@@ -62,11 +72,33 @@ export default class extends Controller {
           console.log("hjsjd");
       };
   };
+
 };
 
 
 
-// Navbar functions
+// const qBtnz = document.getElementsByClassName("quizz-btnzz");
+
+// function myScript(correctCheck) {
+//   if (correctCheck == true) {
+//     console.log("correct")
+//   } else {
+//     console.log("incorrect")
+//   }
+// }
+
+
+
+// qBtnz.addEventListener("click", myScript);
+
+
+
+
+
+
+
+
+// Navbar hiding function - now being placed in index.js
 
 // window.onscroll = function navbarReveal() {
 //   var hidden = document.getElementsByClassName('hide-navbar')[0];
