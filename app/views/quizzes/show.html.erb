@@ -29,6 +29,8 @@
             <a class="quiz-button-lg" href="#"><%= answer.text %></a>
           </div>
           -->
+
+          <!--
           <div class="quiz-buttons-container"
               data-controller="quiz"
               data-action="click->quiz#checkResult"
@@ -36,8 +38,16 @@
               data-quiz-correct-value="<%= answer.correct ? 'correct' : 'wrong'%>">
 
             <input type="button" value="<%= answer.text %>" class="quiz-button-lg">
-          
+
           </div>
+          -->
+
+          <input type="button" value="<%= answer.text %>" class="quiz-button-lg" data-controller="quiz"
+              data-action="click->quiz#checkResult"
+              data-quiz-target="button"
+              data-quiz-correct-value="<%= answer.correct ? 'correct' : 'wrong'%>">
+
+
         <% end %>
 
         <div class="quiz-link-to">
