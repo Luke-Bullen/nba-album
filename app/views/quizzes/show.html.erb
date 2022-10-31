@@ -30,6 +30,34 @@
           </div>
 
 
+          <!--
+          <input type="button" onclick="myScript(<%= answer.correct %>)" value="(<%= answer.text %>)" class="quizz-btnzz">
+          -->
+
+
+          <!--
+          <input type="button" value="(<%= answer.text %>)" class="quizz-btnzz"
+          data-controller="hello"
+          data-action="click->hello#checking
+            <%=
+              if answer.correct == true
+                'True'
+              else
+                'False'
+              end
+            %>"
+          data-hello-target="button"
+          data-hello-correct-value="correct"
+          >
+          -->
+
+          <input type="button" value="(<%= answer.text %>)" class="quizz-btnzz">
+          <script>
+            const corct = <%= answer.correct %>
+          </script>
+
+          <p><%= answer.correct %></p>
+
 
           <!--
           <div class="quiz-buttons-container"
