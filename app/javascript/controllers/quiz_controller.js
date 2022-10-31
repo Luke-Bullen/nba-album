@@ -27,6 +27,12 @@ export default class extends Controller {
           // quizResultMessage.style.opacity = 0.7;
           quizResultMessage.style.display = "block";
           const quizOpenPack = document.getElementById("quiz-open-pack").style.display = "block";
+
+
+
+          let quizButtonz = document.getElementsByClassName("quiz-button-lg");
+          quizButtonz.disabled = true;
+
       } else {
           button.style.backgroundColor = "#C8102E"; //$red
           // button.style.backgroundColor = "#C8102E";
@@ -37,10 +43,18 @@ export default class extends Controller {
           // quizResultMessage.style.opacity = 0.7;
           quizResultMessage.style.display = "block";
           document.getElementById("quiz-try-another").style.display = "block";
+
+
+
+          let quizButtonz = document.getElementsByClassName("quiz-button-lg");
+          quizButtonz.disabled = true;
       };
   };
 };
 
+
+
+// Navbar functions
 
 // window.onscroll = function navbarReveal() {
 //   var hidden = document.getElementsByClassName('hide-navbar')[0];
