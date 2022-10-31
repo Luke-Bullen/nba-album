@@ -30,8 +30,14 @@ export default class extends Controller {
 
 
 
-          let quizButtonz = document.getElementsByClassName("quiz-button-lg");
-          quizButtonz.disabled = true;
+          // let quizButtonz = document.getElementsByClassName("quiz-button-lg");
+          // quizButtonz.disabled = true;
+
+          const quizButtonz = document.getElementsByClassName("quiz-buttons-container");
+          // quizButtonz.data-action = "";
+          console.log(quizButtonz);
+          quizButtonz.all.dataAction.disable ;
+          console.log("xzxz")
 
       } else {
           button.style.backgroundColor = "#C8102E"; //$red
@@ -46,8 +52,14 @@ export default class extends Controller {
 
 
 
-          let quizButtonz = document.getElementsByClassName("quiz-button-lg");
-          quizButtonz.disabled = true;
+          // let quizButtonz = document.getElementsByClassName("quiz-button-lg");
+          // quizButtonz.disabled = true;
+
+          const quizButtonz = document.getElementsByClassName("quiz-buttons-container");
+          // quizButtonz.data-action = "";
+          console.log(quizButtonz);
+          quizButtonz.all.dataAction.disable;
+          console.log("hjsjd");
       };
   };
 };
