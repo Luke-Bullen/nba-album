@@ -15,14 +15,21 @@ function myScript(correctCheck) {
 
 
 export default class extends Controller {
-  static targets = ["button"]
+  // static targets = ["button"]
+  static targets = ["button", "message"];
+
+  static values = {
+      correct: String,
+  }
+
+
 
 
   connect() {
-    this.element.textContent = "Hello World!"
+    // this.element.textContent = "Hello World!"
 
 
-    console.log("helloooo")
+    console.log("helloooo");
   }
 
   checking() {
@@ -34,10 +41,23 @@ export default class extends Controller {
   }
 
   checkingTrue(){
-    console.log("true")
+    console.log("true");
   }
 
   checkingFalse(){
-    console.log("false")
+    console.log("false");
   }
+
+
+
+  checkResult(event) {
+    event.preventDefault();
+    const button = this.buttonTarget;
+    if (this.correctValue == "correct") {
+        console.log("xzxz");
+
+    } else {
+        console.log("hjsjd");
+    };
+};
 }

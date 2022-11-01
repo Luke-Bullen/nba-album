@@ -51,11 +51,31 @@
           >
           -->
 
-          <input type="button" value="(<%= answer.text %>)" class="quizz-btnzz">
-          <script>
-            const corct = <%= answer.correct %>
-          </script>
 
+          <!--
+          <div data-controller="hello">
+            <input type="button" value="(<%= answer.text %>)" class="quizz-btnzz"
+            data-action="click->hello#checking
+              <%=
+                if answer.correct == true
+                  'True'
+                else
+                  'False'
+                end
+              %>"
+            data-hello-correct-value="correct"
+            >
+          </div>
+          -->
+
+
+          <div class="quiz-buttons-container"
+              data-controller="hello"
+              data-action="click->hello#checkResult"
+              data-hello-target="button"
+              data-hello-correct-value="<%= answer.correct ? 'correct' : 'wrong'%>">
+            <input type="button" value="(<%= answer.text %>)" class="quizz-btnzz">
+          </div>
           <p><%= answer.correct %></p>
 
 
@@ -80,6 +100,7 @@
           -->
 
         <% end %>
+
 
         <div class="quiz-link-to">
           <%= link_to 'Try Another', "/albums/#{@album_id}/quizzes/#{rand(@quiz_first..@quiz_last)}" , id: "quiz-try-another", target: "_top" %>
