@@ -1,119 +1,36 @@
 <div id="quiz-wrapper" >
   <div class="quiz-container">
-  <%# <div class="quiz-container quiz-title-container"> %>
-    <%# <div class="quiz-title-container"> %>
-      <%# <div> %>
-        <%# <p>Add cards to you album answering the question</p> %>
-        <%# <h1><%= @quiz.question %>
-        <%# </h1> %>
+    <p class="text-width-quiz">Add cards to you album by answering the question</p>
+    <h1 class="text-width-quiz"><%= @quiz.question %></h1>
 
-        <p class="text-width-quiz">Add cards to you album by answering the question</p>
-        <h1 class="text-width-quiz"><%= @quiz.question %></h1>
-        <%# <p><span style="color: black">Add cards to you album answering the question</span></p> %>
-        <%# <h1 class="element-width"><span style="color: black"><%= @quiz.question %>
-        <%# </span></h1> %>
+    <div id="quiz-result-message">
+    </div>
 
-      <%# </div> %>
-
-      <%# <div> %>
-        <div id="quiz-result-message">
-        </div>
-
-        <% @quiz.quiz_answers.each do |answer| %>
-
-          <div class="quiz-buttons-container"
-              data-controller="quiz"
-              data-action="click->quiz#checkResult"
-              data-quiz-target="button"
-              data-quiz-correct-value="<%= answer.correct ? 'correct' : 'wrong'%>">
-            <a class="quiz-button-lg" href="#"><%= answer.text %></a>
-          </div>
-
-
-          <!--
-          <input type="button" onclick="myScript(<%= answer.correct %>)" value="(<%= answer.text %>)" class="quizz-btnzz">
-          -->
-
-
-          <!--
-          <input type="button" value="(<%= answer.text %>)" class="quizz-btnzz"
+    <% @quiz.quiz_answers.each do |answer| %>
+      <!--
+      <div class="quiz-buttons-container"
+          data-controller="quiz"
+          data-action="click->quiz#checkResult"
+          data-quiz-target="button"
+          data-quiz-correct-value="<%= answer.correct ? 'correct' : 'wrong'%>">
+        <a class="quiz-button-lg" href="#"><%= answer.text %></a>
+      </div>
+      -->
+      <div class="quiz-buttons-container"
           data-controller="hello"
-          data-action="click->hello#checking
-            <%=
-              if answer.correct == true
-                'True'
-              else
-                'False'
-              end
-            %>"
           data-hello-target="button"
-          data-hello-correct-value="correct"
-          >
-          -->
+          data-hello-correct-value="<%= answer.correct ? 'correct' : 'wrong'%>">
+        <input type="button" value="(<%= answer.text %>)" class="quizz-btnzz" data-action="click->hello#checkResult">
+      </div>
+    <% end %>
 
 
-          <!--
-          <div data-controller="hello">
-            <input type="button" value="(<%= answer.text %>)" class="quizz-btnzz"
-            data-action="click->hello#checking
-              <%=
-                if answer.correct == true
-                  'True'
-                else
-                  'False'
-                end
-              %>"
-            data-hello-correct-value="correct"
-            >
-          </div>
-          -->
+    <div class="quiz-link-to">
+      <%= link_to 'Try Another', "/albums/#{@album_id}/quizzes/#{rand(@quiz_first..@quiz_last)}" , id: "quiz-try-another", target: "_top" %>
+    </div>
 
-
-          <div class="quiz-buttons-container"
-              data-controller="hello"
-              <%# data-action="click->hello#checkResult" %>
-              data-hello-target="button"
-              data-hello-correct-value="<%= answer.correct ? 'correct' : 'wrong'%>">
-            <input type="button" value="(<%= answer.text %>)" class="quizz-btnzz" data-action="click->hello#checkResult">
-            <!--
-            <input type="button" value="(<%= answer.text %>)" class="quizz-btnzz" data-action="click->hello#checkingcorrect">
-            <input type="button" value="(<%= answer.text %>)" class="quizz-btnzz" data-action="click->hello#checking<%= answer.correct ? 'correct' : 'wrong'%>">
-            -->
-          </div>
-          <p><%= answer.correct %></p>
-
-
-          <!--
-          <div class="quiz-buttons-container"
-              data-controller="quiz"
-              data-action="click->quiz#checkResult"
-              data-quiz-target="button"
-              data-quiz-correct-value="<%= answer.correct ? 'correct' : 'wrong'%>">
-
-            <input type="button" value="<%= answer.text %>" class="quiz-button-lg">
-
-          </div>
-          -->
-
-
-          <!--
-          <input type="button" value="<%= answer.text %>" class="quiz-button-lg" data-controller="quiz"
-              data-action="click->quiz#checkResult"
-              data-quiz-target="button"
-              data-quiz-correct-value="<%= answer.correct ? 'correct' : 'wrong'%>">
-          -->
-
-        <% end %>
-
-
-        <div class="quiz-link-to">
-          <%= link_to 'Try Another', "/albums/#{@album_id}/quizzes/#{rand(@quiz_first..@quiz_last)}" , id: "quiz-try-another", target: "_top" %>
-        </div>
-
-        <div class="quiz-link-to">
-          <%= link_to 'Open Pack', "/albums/#{@album_id}/packs/#{@album_id}", id: "quiz-open-pack", target: "_top" %>
-        </div>
-      <%# </div> %>
-    <%# </div> %>
+    <div class="quiz-link-to">
+      <%= link_to 'Open Pack', "/albums/#{@album_id}/packs/#{@album_id}", id: "quiz-open-pack", target: "_top" %>
+    </div>
   </div>
 </div>
