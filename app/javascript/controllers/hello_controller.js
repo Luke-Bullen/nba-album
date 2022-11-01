@@ -40,11 +40,11 @@ export default class extends Controller {
     }
   }
 
-  checkingTrue(){
+  checkingcorrect(){
     console.log("true");
   }
 
-  checkingFalse(){
+  checkingwrong(){
     console.log("false");
   }
 
@@ -55,9 +55,17 @@ export default class extends Controller {
     const button = this.buttonTarget;
     if (this.correctValue == "correct") {
         console.log("xzxz");
+        // document.getElementsByClassName("quizz-btnzz").disabled = true;
+        const bnz = document.getElementsByClassName("quizz-btnzz");
+        bnz.all.disabled = true;
+        console.log(bnz);
 
     } else {
         console.log("hjsjd");
+        // document.getElementsByClassName("quizz-btnzz").disabled = true;
+        const bnz = document.getElementsByClassName("quizz-btnzz");
+        bnz.all.disabled = true;
+        console.log(bnz);
     };
 };
 }

@@ -71,10 +71,13 @@
 
           <div class="quiz-buttons-container"
               data-controller="hello"
-              data-action="click->hello#checkResult"
+              <%# data-action="click->hello#checkResult" %>
               data-hello-target="button"
               data-hello-correct-value="<%= answer.correct ? 'correct' : 'wrong'%>">
-            <input type="button" value="(<%= answer.text %>)" class="quizz-btnzz">
+            <input type="button" value="(<%= answer.text %>)" class="quizz-btnzz" data-action="click->hello#checkResult">
+            <input type="button" value="(<%= answer.text %>)" class="quizz-btnzz" data-action="click->hello#checkingcorrect">
+            <input type="button" value="(<%= answer.text %>)" class="quizz-btnzz" data-action="click->hello#checking<%= answer.correct ? 'correct' : 'wrong'%>">
+
           </div>
           <p><%= answer.correct %></p>
 
