@@ -12,7 +12,7 @@
           data-controller="quiz"
           data-quiz-target="button"
           data-quiz-correct-value="<%= answer.correct ? 'correct' : 'wrong'%>">
-        <input type="button" value="(<%= answer.text %>)" class="quiz-answer-button" data-action="click->quiz#checkResult">
+        <input type="button" value="<%= answer.text %>" class="quiz-answer-button" data-action="click->quiz#checkResult">
       </div>
     <% end %>
 

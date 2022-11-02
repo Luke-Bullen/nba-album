@@ -1,13 +1,14 @@
 #quiz-wrapper {
-    height: fit-content, 100vh;
+    // height: fit-content, 100vh;
+    min-height: 100vh;
     color: white;
     background-color: $dark;
 }
 
 .quiz-container {
     margin: auto;
-    width: 60%;
-    padding: 10px;
+    // width: 60%;
+    // padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
