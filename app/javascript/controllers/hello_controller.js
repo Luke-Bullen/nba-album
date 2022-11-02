@@ -1,5 +1,8 @@
 import { Controller } from "@hotwired/stimulus"
 
+// CONTROLLER NO LONGER REQUIRED---------------
+
+
 const qBtnz = document.getElementsByClassName("quizz-btnzz");
 
 
