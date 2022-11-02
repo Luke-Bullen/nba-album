@@ -17,6 +17,13 @@
       </div>
       -->
       <div class="quiz-buttons-container"
+          data-controller="quiz"
+          data-quiz-target="button"
+          data-quiz-correct-value="<%= answer.correct ? 'correct' : 'wrong'%>">
+        <input type="button" value="(<%= answer.text %>)" class="quizz-btnzz" data-action="click->quiz#checkResult">
+      </div>
+
+      <div class="quiz-buttons-container"
           data-controller="hello"
           data-hello-target="button"
           data-hello-correct-value="<%= answer.correct ? 'correct' : 'wrong'%>">
