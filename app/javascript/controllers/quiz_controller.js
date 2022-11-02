@@ -27,17 +27,24 @@ export default class extends Controller {
         quizResultMessage.style.display = "block";
         const quizOpenPack = document.getElementById("quiz-open-pack").style.display = "block";
 
+
+        document.getElementById("h2Question").scrollIntoView();
+
+
     } else {
         for(var i = 0; i < quizAnswerButtons.length; i++) {
           quizAnswerButtons[i].disabled = true;
         };
         button.style.backgroundColor = "#C8102E"; //$red
         const quizResultMessage = document.getElementById("quiz-result-message");
-        quizResultMessage.innerText = "Sooooo cloze!!! Best luck next time";
+        // quizResultMessage.innerText = "Sooooo cloze!!! Best luck next time";
+        quizResultMessage.innerText = "Sooooo close!!! Better luck next time";
         quizResultMessage.style.backgroundColor = "rgba(200, 16, 46, 0.7)"; //$red
         quizResultMessage.style.display = "block";
         document.getElementById("quiz-try-another").style.display = "block";
 
+
+        document.getElementById("h2Question").scrollIntoView();
     };
 };
 }

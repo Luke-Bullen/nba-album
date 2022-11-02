@@ -1,8 +1,10 @@
 <div id="quiz-wrapper" >
   <div class="quiz-container">
 
-    <p class="text-width-quiz">Add cards to you album by answering the question</p>
-    <h1 class="text-width-quiz"><%= @quiz.question %></h1>
+    <div class="text-width-quiz">
+      <p>Add cards to your album by correctly answering the question:</p>
+      <h2 id="h2Question"><%= @quiz.question %></h2>
+    </div>
 
     <div id="quiz-result-message">
     </div>
