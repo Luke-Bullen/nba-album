@@ -16,19 +16,24 @@ export default class extends Controller {
     event.preventDefault();
     const button = this.buttonTarget;
     const quizAnswerButtons = document.getElementsByClassName("quiz-answer-button");
+    const quizResultMessage = document.getElementById("quiz-result-message");
     if (this.correctValue == "correct") {
         for(var i = 0; i < quizAnswerButtons.length; i++) {
           quizAnswerButtons[i].disabled = true;
         };
         button.style.backgroundColor = "#3e753b"; //green
-        const quizResultMessage = document.getElementById("quiz-result-message");
-        quizResultMessage.innerText = "Congratulations! You won a new pack of 5 cards!";
+        // const quizResultMessage = document.getElementById("quiz-result-message");
+
+        // quizResultMessage.innerText = "Congratulations! You won a new pack of 5 cards!";
+        // quizResultMessage.innerText = "Swishhhhh!!!";
+        quizResultMessage.innerText = "Swish!!! Open your pack below!";
+
         quizResultMessage.style.backgroundColor = "rgba(62, 117, 59, 0.7)"; //green
-        quizResultMessage.style.display = "block";
+        // quizResultMessage.style.display = "block";
         const quizOpenPack = document.getElementById("quiz-open-pack").style.display = "block";
 
 
-        document.getElementById("h2Question").scrollIntoView();
+        // document.getElementById("h2Question").scrollIntoView();
 
 
     } else {
@@ -36,15 +41,19 @@ export default class extends Controller {
           quizAnswerButtons[i].disabled = true;
         };
         button.style.backgroundColor = "#C8102E"; //$red
-        const quizResultMessage = document.getElementById("quiz-result-message");
+        // const quizResultMessage = document.getElementById("quiz-result-message");
+
         // quizResultMessage.innerText = "Sooooo cloze!!! Best luck next time";
-        quizResultMessage.innerText = "Sooooo close!!! Better luck next time";
+        quizResultMessage.innerText = "So close!!! Better luck next time!";
+
         quizResultMessage.style.backgroundColor = "rgba(200, 16, 46, 0.7)"; //$red
-        quizResultMessage.style.display = "block";
+        // quizResultMessage.style.display = "block";
         document.getElementById("quiz-try-another").style.display = "block";
 
 
-        document.getElementById("h2Question").scrollIntoView();
+        // document.getElementById("h2Question").scrollIntoView();
     };
+    quizResultMessage.style.display = "block";
+    document.getElementById("h2Question").scrollIntoView(true);
 };
 }
