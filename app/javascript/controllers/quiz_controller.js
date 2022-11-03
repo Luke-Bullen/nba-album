@@ -41,7 +41,8 @@ export default class extends Controller {
 
     // Debating between scrolling to top of the question or upto the bottom of the next action
     // document.getElementById("h2Question").scrollIntoView(true);
-    document.getElementById("quizNextAction").scrollIntoView(false);
+    // document.getElementById("quizNextAction").scrollIntoView(false);
+    document.getElementById("quiz-wrapper").scrollIntoView(false);
 
 };
 }
