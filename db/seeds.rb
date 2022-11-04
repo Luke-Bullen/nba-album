@@ -187,10 +187,6 @@ QuizAnswer.create(quiz: quiz3, text: 'Lebron James', correct: false)
 QuizAnswer.create(quiz: quiz3, text: 'Michael Jordan', correct: false)
 QuizAnswer.create(quiz: quiz3, text: 'Kareem Abdul-Jabbar', correct: true)
 
-
-
-
-
 quiz4 = Quiz.new(question: "What is depicted on the logo of the Golden State Warriors?")
 quiz4.save!
 QuizAnswer.create(quiz: quiz4, text: 'A bridge', correct: true)
