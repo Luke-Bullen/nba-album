@@ -227,35 +227,35 @@ QuizAnswer.create(quiz: quiz9, text: '1942', correct: false)
 QuizAnswer.create(quiz: quiz9, text: '1944', correct: false)
 QuizAnswer.create(quiz: quiz9, text: '1946', correct: true)
 
-quiz10 = Quiz.new(question: "")
+quiz10 = Quiz.new(question: "Who won the championship in 2011?")
 quiz10.save!
-QuizAnswer.create(quiz: quiz10, text: '', correct: false)
-QuizAnswer.create(quiz: quiz10, text: '', correct: false)
-QuizAnswer.create(quiz: quiz10, text: '', correct: true)
+QuizAnswer.create(quiz: quiz10, text: 'Miami Heat', correct: false)
+QuizAnswer.create(quiz: quiz10, text: 'Dallas Mavericks', correct: true)
+QuizAnswer.create(quiz: quiz10, text: 'Los Angeles Lakers', correct: false)
 
-quiz11 = Quiz.new(question: "")
+quiz11 = Quiz.new(question: "Who was the 2008 finals MVP?")
 quiz11.save!
-QuizAnswer.create(quiz: quiz11, text: '', correct: false)
-QuizAnswer.create(quiz: quiz11, text: '', correct: false)
-QuizAnswer.create(quiz: quiz11, text: '', correct: true)
+QuizAnswer.create(quiz: quiz11, text: 'Kobe Bryant', correct: false)
+QuizAnswer.create(quiz: quiz11, text: 'Pau Gasol', correct: false)
+QuizAnswer.create(quiz: quiz11, text: 'Paul Pierce', correct: true)
 
-quiz12 = Quiz.new(question: "")
+quiz12 = Quiz.new(question: "Who has the most NBA championships as head coach?")
 quiz12.save!
-QuizAnswer.create(quiz: quiz12, text: '', correct: false)
-QuizAnswer.create(quiz: quiz12, text: '', correct: false)
-QuizAnswer.create(quiz: quiz12, text: '', correct: true)
+QuizAnswer.create(quiz: quiz12, text: 'Phil Jackson', correct: true)
+QuizAnswer.create(quiz: quiz12, text: 'Steve Kerr', correct: false)
+QuizAnswer.create(quiz: quiz12, text: 'Red Auerbach', correct: false)
 
-quiz13 = Quiz.new(question: "")
+quiz13 = Quiz.new(question: "Which team won the first-ever NBA game?")
 quiz13.save!
-QuizAnswer.create(quiz: quiz13, text: '', correct: false)
-QuizAnswer.create(quiz: quiz13, text: '', correct: false)
-QuizAnswer.create(quiz: quiz13, text: '', correct: true)
+QuizAnswer.create(quiz: quiz13, text: 'New York Knicks', correct: true)
+QuizAnswer.create(quiz: quiz13, text: 'Bostons Celtics', correct: false)
+QuizAnswer.create(quiz: quiz13, text: 'Toronto Huskies', correct: false)
 
-quiz14 = Quiz.new(question: "")
+quiz14 = Quiz.new(question: "Who was voted the MVP for the 2014-15 season?")
 quiz14.save!
-QuizAnswer.create(quiz: quiz14, text: '', correct: false)
-QuizAnswer.create(quiz: quiz14, text: '', correct: false)
-QuizAnswer.create(quiz: quiz14, text: '', correct: true)
+QuizAnswer.create(quiz: quiz14, text: 'Stephen Curry', correct: true)
+QuizAnswer.create(quiz: quiz14, text: 'LeBron James', correct: false)
+QuizAnswer.create(quiz: quiz14, text: 'James Harden', correct: false)
 
 quiz15 = Quiz.new(question: "")
 quiz15.save!
