@@ -253,12 +253,12 @@ QuizAnswer.create(quiz: quiz13, text: 'Toronto Huskies', correct: false)
 
 quiz14 = Quiz.new(question: "Who was voted the MVP for the 2014-15 season?")
 quiz14.save!
-QuizAnswer.create(quiz: quiz14, text: 'Stephen Curry', correct: true)
 QuizAnswer.create(quiz: quiz14, text: 'LeBron James', correct: false)
+QuizAnswer.create(quiz: quiz14, text: 'Stephen Curry', correct: true)
 QuizAnswer.create(quiz: quiz14, text: 'James Harden', correct: false)
 
-quiz15 = Quiz.new(question: "")
+quiz15 = Quiz.new(question: "Who was the first pick in the 2022 draft?")
 quiz15.save!
-QuizAnswer.create(quiz: quiz15, text: '', correct: false)
-QuizAnswer.create(quiz: quiz15, text: '', correct: false)
-QuizAnswer.create(quiz: quiz15, text: '', correct: true)
+QuizAnswer.create(quiz: quiz15, text: 'Cade Cunningham', correct: false)
+QuizAnswer.create(quiz: quiz15, text: 'Jabari Smith Jr.', correct: false)
+QuizAnswer.create(quiz: quiz15, text: 'Paolo Banchero', correct: true)
