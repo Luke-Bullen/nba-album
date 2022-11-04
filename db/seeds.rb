@@ -175,7 +175,7 @@ QuizAnswer.create(quiz: quiz1, text: 'Brooklyn, NY', correct: true)
 QuizAnswer.create(quiz: quiz1, text: 'Chicago, IL', correct: false)
 QuizAnswer.create(quiz: quiz1, text: 'Atlanta, GH', correct: false)
 
-quiz2 = Quiz.new(question: "What team won the championship in 1993?")
+quiz2 = Quiz.new(question: "Which team won the championship in 1993?")
 quiz2.save!
 QuizAnswer.create(quiz: quiz2, text: 'Los Angeles Lakers', correct: false)
 QuizAnswer.create(quiz: quiz2, text: 'Chicago Bulls', correct: true)
@@ -186,3 +186,79 @@ quiz3.save!
 QuizAnswer.create(quiz: quiz3, text: 'Lebron James', correct: false)
 QuizAnswer.create(quiz: quiz3, text: 'Michael Jordan', correct: false)
 QuizAnswer.create(quiz: quiz3, text: 'Kareem Abdul-Jabbar', correct: true)
+
+
+
+
+
+quiz4 = Quiz.new(question: "")
+quiz4.save!
+QuizAnswer.create(quiz: quiz4, text: '', correct: false)
+QuizAnswer.create(quiz: quiz4, text: '', correct: false)
+QuizAnswer.create(quiz: quiz4, text: '', correct: true)
+
+quiz5 = Quiz.new(question: "")
+quiz5.save!
+QuizAnswer.create(quiz: quiz5, text: '', correct: false)
+QuizAnswer.create(quiz: quiz5, text: '', correct: false)
+QuizAnswer.create(quiz: quiz5, text: '', correct: true)
+
+quiz6 = Quiz.new(question: "")
+quiz6.save!
+QuizAnswer.create(quiz: quiz6, text: '', correct: false)
+QuizAnswer.create(quiz: quiz6, text: '', correct: false)
+QuizAnswer.create(quiz: quiz6, text: '', correct: true)
+
+quiz7 = Quiz.new(question: "")
+quiz7.save!
+QuizAnswer.create(quiz: quiz7, text: '', correct: false)
+QuizAnswer.create(quiz: quiz7, text: '', correct: false)
+QuizAnswer.create(quiz: quiz7, text: '', correct: true)
+
+quiz8 = Quiz.new(question: "")
+quiz8.save!
+QuizAnswer.create(quiz: quiz8, text: '', correct: false)
+QuizAnswer.create(quiz: quiz8, text: '', correct: false)
+QuizAnswer.create(quiz: quiz8, text: '', correct: true)
+
+quiz9 = Quiz.new(question: "")
+quiz9.save!
+QuizAnswer.create(quiz: quiz9, text: '', correct: false)
+QuizAnswer.create(quiz: quiz9, text: '', correct: false)
+QuizAnswer.create(quiz: quiz9, text: '', correct: true)
+
+quiz10 = Quiz.new(question: "")
+quiz10.save!
+QuizAnswer.create(quiz: quiz10, text: '', correct: false)
+QuizAnswer.create(quiz: quiz10, text: '', correct: false)
+QuizAnswer.create(quiz: quiz10, text: '', correct: true)
+
+quiz11 = Quiz.new(question: "")
+quiz11.save!
+QuizAnswer.create(quiz: quiz11, text: '', correct: false)
+QuizAnswer.create(quiz: quiz11, text: '', correct: false)
+QuizAnswer.create(quiz: quiz11, text: '', correct: true)
+
+quiz12 = Quiz.new(question: "")
+quiz12.save!
+QuizAnswer.create(quiz: quiz12, text: '', correct: false)
+QuizAnswer.create(quiz: quiz12, text: '', correct: false)
+QuizAnswer.create(quiz: quiz12, text: '', correct: true)
+
+quiz13 = Quiz.new(question: "")
+quiz13.save!
+QuizAnswer.create(quiz: quiz13, text: '', correct: false)
+QuizAnswer.create(quiz: quiz13, text: '', correct: false)
+QuizAnswer.create(quiz: quiz13, text: '', correct: true)
+
+quiz14 = Quiz.new(question: "")
+quiz14.save!
+QuizAnswer.create(quiz: quiz14, text: '', correct: false)
+QuizAnswer.create(quiz: quiz14, text: '', correct: false)
+QuizAnswer.create(quiz: quiz14, text: '', correct: true)
+
+quiz15 = Quiz.new(question: "")
+quiz15.save!
+QuizAnswer.create(quiz: quiz15, text: '', correct: false)
+QuizAnswer.create(quiz: quiz15, text: '', correct: false)
+QuizAnswer.create(quiz: quiz15, text: '', correct: true)
