@@ -191,41 +191,41 @@ QuizAnswer.create(quiz: quiz3, text: 'Kareem Abdul-Jabbar', correct: true)
 
 
 
-quiz4 = Quiz.new(question: "")
+quiz4 = Quiz.new(question: "What is depicted on the logo of the Golden State Warriors?")
 quiz4.save!
-QuizAnswer.create(quiz: quiz4, text: '', correct: false)
-QuizAnswer.create(quiz: quiz4, text: '', correct: false)
-QuizAnswer.create(quiz: quiz4, text: '', correct: true)
+QuizAnswer.create(quiz: quiz4, text: 'A bridge', correct: true)
+QuizAnswer.create(quiz: quiz4, text: 'A basketball', correct: false)
+QuizAnswer.create(quiz: quiz4, text: 'A spearhead', correct: false)
 
-quiz5 = Quiz.new(question: "")
+quiz5 = Quiz.new(question: "Who won more championships, Kobe or Shaq?")
 quiz5.save!
-QuizAnswer.create(quiz: quiz5, text: '', correct: false)
-QuizAnswer.create(quiz: quiz5, text: '', correct: false)
-QuizAnswer.create(quiz: quiz5, text: '', correct: true)
+QuizAnswer.create(quiz: quiz5, text: 'Kobe', correct: true)
+QuizAnswer.create(quiz: quiz5, text: 'Shaq', correct: false)
+QuizAnswer.create(quiz: quiz5, text: 'They are tied', correct: false)
 
-quiz6 = Quiz.new(question: "")
+quiz6 = Quiz.new(question: "What is the record for most regular season wins, set by the Golden State Warriors in 2015–16?")
 quiz6.save!
-QuizAnswer.create(quiz: quiz6, text: '', correct: false)
-QuizAnswer.create(quiz: quiz6, text: '', correct: false)
-QuizAnswer.create(quiz: quiz6, text: '', correct: true)
+QuizAnswer.create(quiz: quiz6, text: '69', correct: false)
+QuizAnswer.create(quiz: quiz6, text: '73', correct: true)
+QuizAnswer.create(quiz: quiz6, text: '76', correct: false)
 
-quiz7 = Quiz.new(question: "")
+quiz7 = Quiz.new(question: "How long is a regular-season NBA game?")
 quiz7.save!
-QuizAnswer.create(quiz: quiz7, text: '', correct: false)
-QuizAnswer.create(quiz: quiz7, text: '', correct: false)
-QuizAnswer.create(quiz: quiz7, text: '', correct: true)
+QuizAnswer.create(quiz: quiz7, text: '48 minutes', correct: true)
+QuizAnswer.create(quiz: quiz7, text: '56 minutes', correct: false)
+QuizAnswer.create(quiz: quiz7, text: '60 minutes', correct: false)
 
-quiz8 = Quiz.new(question: "")
+quiz8 = Quiz.new(question: "Michael Jordan made his NBA debut in which year?")
 quiz8.save!
-QuizAnswer.create(quiz: quiz8, text: '', correct: false)
-QuizAnswer.create(quiz: quiz8, text: '', correct: false)
-QuizAnswer.create(quiz: quiz8, text: '', correct: true)
+QuizAnswer.create(quiz: quiz8, text: '1982', correct: false)
+QuizAnswer.create(quiz: quiz8, text: '1983', correct: false)
+QuizAnswer.create(quiz: quiz8, text: '1984', correct: true)
 
-quiz9 = Quiz.new(question: "")
+quiz9 = Quiz.new(question: "When was the NBA established?")
 quiz9.save!
-QuizAnswer.create(quiz: quiz9, text: '', correct: false)
-QuizAnswer.create(quiz: quiz9, text: '', correct: false)
-QuizAnswer.create(quiz: quiz9, text: '', correct: true)
+QuizAnswer.create(quiz: quiz9, text: '1942', correct: false)
+QuizAnswer.create(quiz: quiz9, text: '1944', correct: false)
+QuizAnswer.create(quiz: quiz9, text: '1946', correct: true)
 
 quiz10 = Quiz.new(question: "")
 quiz10.save!
