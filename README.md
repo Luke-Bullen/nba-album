@@ -1,8 +1,12 @@
 My Personal Version of the 'NBA Digital Album' project - 
 
+IMPORTANT:
+
 The .json used to fill the seed data is no longer active, resulting in no more seed data for the players, teams and albums - so unfortunatly the project is no longer progressing and the work can't be properly viewed
 
 My take on the front end styling and refactoring is still incomplete (eg: landing page) but significant progress was made on the quiz page and Albums show pages
+
+
 
 
 
