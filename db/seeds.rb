@@ -5,6 +5,8 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+
 require "json"
 require "open-uri"
 require 'pp'
@@ -23,7 +25,10 @@ Quiz.destroy_all
 puts "----------------------------------------------------------------"
 puts "seeding the database"
 puts "----------------------------------------------------------------"
-teams_url = 'https://data.nba.net/data/10s/prod/v2/2021/teams.json'
+# teams_url = 'https://data.nba.net/data/10s/prod/v2/2021/teams.json'
+# url above is original version - now it says DNS failure
+teams_url = 'https://data.nba.net/data/10s/prod/v2/2022/teams.json'
+
 
 teams_serialized = URI.open(teams_url).read
 # teams_serialized = File.open('teams.json').read
@@ -62,7 +67,11 @@ TEAMS.each do |team|
   rosters["teams"] << rooster_team
 end
 
-seasons = ["2019", "2020", "2021"]
+# seasons = ["2019", "2020", "2021"]
+# above is original version - 2019 doesn't work - DNS failure
+
+seasons = ["2020", "2021", "2022"]
+
 
 ################################################################################################
 # Looping through players by season
@@ -99,6 +108,7 @@ seasons.each do |season|
 
       # Add data from profile URL
       profile_url = "https://data.nba.net/data/10s/prod/v1/#{season}/players/#{player['personId']}_profile.json"
+      puts profile_url
       # profile_url = "https://data.nba.net/data/10s/prod/v1/2021/players/1630554_profile.json"
       profile_serialized = URI.open(profile_url).read
       profile_json = JSON.parse(profile_serialized)
